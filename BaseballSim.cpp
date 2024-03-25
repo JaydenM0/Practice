@@ -7,19 +7,6 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-//make a baseball simulator
-
-/*
-create an array to replicate innings with 9 columns and 2 rows
-create 2 teams
-randomly generate a number for the top and the bottom innings
-the team with the larger score wins
-
-
-
-
-*/
-
 int innings[2][9] ={{0,0,0,0,0,0,0,0,0},
                       {0,0,0,0,0,0,0,0,0}};
 
@@ -35,8 +22,6 @@ void introduction(){
 };
 
 
-/*iterated through the array "innings" and disply the score at each element.*/
-
 void displayInnings(const int innings[2][9]) {
     // Display the innings array
     for (int i = 0; i < 2; ++i) {
@@ -48,12 +33,10 @@ void displayInnings(const int innings[2][9]) {
         cout << "--------------------" << endl;
     }
     
-}
+};/*iterate through the array "innings" and display the score at each element.*/
 
 
-/* calculate the final score of each team by iterating 
-    through the top of the innings then the bottom. 
- */
+
 void finalScore(const int innings[2][9], int &team1Score, int &team2Score){
     for(int i = 0; i < 2;++i){
         for(int j = 0; j<10;++j){
@@ -65,7 +48,9 @@ void finalScore(const int innings[2][9], int &team1Score, int &team2Score){
             }
         }
     }
-};
+};/* calculate the final score of each team by iterating 
+    through the top of the innings then the bottom. 
+ */
 
 int main(){
     introduction();
